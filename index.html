@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prathamesh Yeole | ENTC Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary-color: #4b7bec;
+      --dark-bg: #121212;
+      --light-bg: #f8f9fa;
+      --dark-text: #ffffff;
+      --light-text: #1f1f1f;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background-color: var(--light-bg);
+      color: var(--light-text);
+      transition: all 0.3s ease;
+    }
+
+    body.dark-mode {
+      background-color: var(--dark-bg);
+      color: var(--dark-text);
+    }
+
+    header {
+      background-color: #ffffff;
+      padding: 20px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header.dark-mode {
+      background-color: #1e1e1e;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: var(--primary-color);
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: inherit;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--primary-color);
+    }
+
+    .toggle-btn {
+      padding: 8px 16px;
+      background: var(--primary-color);
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 10%;
+      text-align: center;
+    }
+
+    .hero img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-top: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    #typewriter {
+      display: inline-block;
+      border-right: 2px solid var(--primary-color);
+      white-space: nowrap;
+      overflow: hidden;
+      font-size: 32px;
+      width: 0;
+      animation: typing 3s steps(30, end) forwards, blink 0.75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    .hero p {
+      max-width: 600px;
+      font-size: 16px;
+      margin: 20px auto;
+      color: #555;
+    }
+
+    section {
+      padding: 60px 10%;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: var(--primary-color);
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s;
+    }
+
+    body.dark-mode .card {
+      background-color: #1e1e1e;
+      color: #ddd;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .contact-links a {
+      display: block;
+      margin: 10px 0;
+      text-decoration: none;
+      color: var(--primary-color);
+    }
+
+    .eye-button {
+      display: inline-block;
+      margin-top: 10px;
+      background: var(--primary-color);
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #eee;
+      color: #555;
+    }
+
+    body.dark-mode footer {
+      background: #1e1e1e;
+      color: #ccc;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Prathamesh Portfolio</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="toggle-btn" onclick="toggleDarkLight()">Toggle Mode</button>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1><span id="typewriter">Hi, I'm Prathamesh Yeole</span></h1>
+      <p>A passionate 1st Year ENTC Student at MITAOE interested in electronics, innovation, and tech that creates impact.</p>
+      <img src="WhatsApp Image 2025-04-14 at 19.33.18_34597400.jpg" alt="Prathamesh Yeole">
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I'm Prathamesh, a first-year Electronics and Telecommunication Engineering student at MITAOE. I love diving into the world of circuits, IoT, and embedded systems. My goal is to apply tech in ways that solve real-world problems. I'm constantly learning and excited about what the future holds in tech and communication systems.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="card-grid">
+      <div class="card">C Programming</div>
+      <div class="card">Python Programmer</div>
+      <div class="card">Basic Electronics</div>
+      <div class="card">HTML & CSS</div>
+      <div class="card">Team Collaboration</div>
+      <div class="card">Critical Thinking</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Emergency Health Services Website</h3>
+        <p>A responsive website for emergency health services built with modern tools and a clean interface.</p>
+        <a class="eye-button" href="https://harshavi1027.wixsite.com/my-site-1" target="_blank">👁 View</a>
+      </div>
+      <div class="card">
+        <h3>Make Gym Experience Easier</h3>
+        <p>Web app that helps users manage gym schedules and connect with trainers more easily.</p>
+        <a class="eye-button" href="https://mfitness.netlify.app/#contact" target="_blank">👁 View</a>
+      </div>
+      <div class="card">
+        <h3>Portfolio Website</h3>
+        <p>My personal responsive website built with HTML and CSS.</p>
+        <a class="eye-button" href="#" target="_blank">👁 View</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-links">
+      <a href="mailto:prathameshyeole2006@gmail.com">📧 prathameshyeole2006@gmail.com</a>
+      <a href="tel:+919307632663">📞 +91 9307632663</a>
+      <a href="http://github.com/yeoleprathamesh" target="_blank">🐱 GitHub</a>
+      <a href="https://www.linkedin.com/in/prathamesh-yeole-857955313/" target="_blank">🔗 LinkedIn</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Prathamesh Yeole. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleDarkLight() {
+      document.body.classList.toggle('dark-mode');
+      document.querySelector('header').classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>
